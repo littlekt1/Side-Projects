@@ -1,0 +1,19 @@
+package com.example.dannydevitomod;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.ResourceLocation;
+
+public class DannyBlock extends Block {
+    public DannyBlock() {
+        super(Properties.create(Material.ROCK)
+            .hardnessAndResistance(2.0f, 10.0f));
+        setRegistryName(new ResourceLocation("dannydevitomod:danny_block")); // Set the block's registry name
+    }
+
+    // Override the method to specify the custom texture location
+    @Override
+    public ResourceLocation getTextureLocation(net.minecraft.block.BlockState state) {
+        return new ResourceLocation("dannydevitomod:textures/block/danny_devito_face.png");
+    }
+}
